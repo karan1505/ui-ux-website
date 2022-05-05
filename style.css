@@ -105,10 +105,25 @@ body {
 
 .header__img {
   left: 600px;
-  margin-top: 250px;
-  margin-left: 300px;
+  margin-top: 275px;
+  margin-left: 90px;
 }
 .image {
   position: absolute;
   size: 500px;
+  border-radius: 10px;
+}
+
+.img3 {
+  z-index: 2;
+}
+
+.img2 {
+  transform: translate(75px, -75px);
+  filter: blur(1px);
+}
+
+.img1 {
+  transform: translate(150px, -150px);
+  filter: blur(2px);
 }
