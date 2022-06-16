@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #d5d6db;
+  --color-primary: #f1f1f1;
   --color-primary-darker: #0b0b0c;
   --color-secondary-darker: #121212;
   --color-primary-opacity: rgb(119, 227, 119);
@@ -15,6 +15,10 @@ body {
 }
 h1 {
   font-weight: 1000;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 900;
 }
 h4 {
   font-weight: 700;
@@ -105,7 +109,7 @@ h4 {
   grid-template-rows: 6fr 7fr;
   align-content: center;
   justify-content: space-between;
-  margin-top: 200px;
+  margin-top: 220px;
   margin-left: 100px;
   row-gap: 3rem;
   align-items: start;
@@ -128,65 +132,168 @@ h4 {
 }
 
 .img2 {
-  transform: translate(75px, -75px);
+  transform: translate(75px, -50px);
   filter: blur(1px);
   z-index: 1;
 }
 
 .img1 {
-  transform: translate(150px, -150px);
+  transform: translate(150px, -100px);
   filter: blur(2px);
   z-index: 0;
 }
-
-.search-box {
-  position: absolute;
-  top: 70%;
-  left: 95px;
-  transform: translate(0%, -50%);
-  background: #2c3441;
-  height: 40px;
-  border-radius: 40px;
-  padding: 10px;
+.section {
+  padding: 15rem 3rem;
+  border-top: 1px solid var(--color-primary);
+  transition: transform 1s, opacity 1s;
 }
 
-.search-box:hover > input {
-  width: 250px;
-  padding: 0 10px;
+.template__tiles {
+  margin-left: 40px;
+  display: grid;
+  grid: 100px / auto auto auto;
+  gap: 360px 50px;
 }
-
-.search-box:hover > .icon {
-  background: #536179;
+.template__root {
+  height: 400px;
+  width: 400px;
+  text-align: center;
+  border-radius: 20px;
+  background: rgb(228, 228, 228);
 }
-
-.icon:hover {
-  transform: rotate(360deg) scale(0.8);
+.template__root:hover {
+  box-shadow: 2px 2px 20px #505053;
+  transition: border-color 0.2s;
 }
-
-input {
-  width: 0;
-  border: none;
-  outline: none;
-  padding: 0;
-  background: none;
-  font-size: 1.1rem;
-  transition: width 0.5s cubic-bezier(0.63, -0.02, 0.75, 0.36);
-  line-height: 40px;
+.template__detail {
+  margin-top: 50px;
+}
+.tileTitle {
+  text-decoration: none;
+  color: #333337;
+}
+.tileImage {
+  text-align: end;
+  margin-top: 67px;
+  z-index: 0;
+  box-shadow: 0 20.83px 22.92px rgb(0 0 0 / 34%);
+  border-radius: 8px 8px 0 0;
+  max-width: 80%;
+  border: 4px wheat;
+}
+.tileTitle:hover {
+  text-decoration: underline;
+}
+.tileHead {
+  margin-bottom: 30px;
+}
+.All_Cat {
+  text-align: start;
+}
+.category {
+  height: 50px;
+  width: 150px;
+}
+.col_white_amrc {
   color: #fff;
 }
 
-.icon {
-  color: #21dfcd;
-  float: left;
-  width: 40px;
-  font-size: 1.3rem;
-  height: 40px;
-  border-radius: 50%;
-  background: #2f3640;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-  cursor: pointer;
+footer {
+  width: 100%;
+  background-color: #263238;
+  min-height: 250px;
+  padding: 10px 0px 25px 0px;
+}
+.pt2 {
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+footer p {
+  font-size: 13px;
+  color: #ccc;
+  padding-bottom: 0px;
+  margin-bottom: 8px;
+}
+.mb10 {
+  padding-bottom: 15px;
+}
+.footer_ul_amrc {
+  margin: 0px;
+  list-style-type: none;
+  font-size: 14px;
+  padding: 0px 0px 10px 0px;
+}
+.footer_ul_amrc li {
+  padding: 0px 0px 5px 0px;
+}
+.footer_ul_amrc li a {
+  color: #ccc;
+}
+.footer_ul_amrc li a:hover {
+  color: #fff;
   text-decoration: none;
+}
+.fleft {
+  float: left;
+}
+.padding-right {
+  padding-right: 10px;
+}
+
+.footer_ul2_amrc {
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+}
+.footer_ul2_amrc li p {
+  display: table;
+}
+.footer_ul2_amrc li a:hover {
+  text-decoration: none;
+}
+.footer_ul2_amrc li i {
+  margin-top: 5px;
+}
+
+.bottom_border {
+  border-bottom: 1px solid #323f45;
+  padding-bottom: 20px;
+}
+.foote_bottom_ul_amrc {
+  list-style-type: none;
+  padding: 0px;
+  display: table;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+}
+.foote_bottom_ul_amrc li {
+  display: inline;
+}
+.foote_bottom_ul_amrc li a {
+  color: #999;
+  margin: 0 12px;
+}
+
+.social_footer_ul {
+  display: table;
+  margin: 15px auto 0 auto;
+  list-style-type: none;
+}
+.social_footer_ul li {
+  padding-left: 20px;
+  padding-top: 10px;
+  float: left;
+}
+.social_footer_ul li a {
+  color: #ccc;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 50%;
+}
+.social_footer_ul li i {
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
